@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to Monster <span>Zoo</span>
+  </h1>
+</div>
+
+<input [(ngModel)]="name"><input [(ngModel)]="powerlevel"><button (click)="addMonster(name, powerlevel)">Add</button>
+
+<ul>
+  <li *ngFor="let monster of monsters | async">
+    {{monster | json}} <button (click)="delete(monster)">Delete</button>
+  </li>
+</ul>
